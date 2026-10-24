@@ -1,0 +1,14 @@
+{
+  "name": "taskflow-fst-aat1",
+  "version": "1.0.0",
+  "description": "TaskFlow - a full stack task tracker (Express REST API + vanilla JS frontend)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/api.test.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

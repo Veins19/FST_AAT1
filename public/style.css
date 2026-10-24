@@ -1,0 +1,33 @@
+:root {
+  --bg: #f3f4f8; --card: #fff; --text: #1f2430; --muted: #6b7280;
+  --accent: #4f46e5; --border: #e5e7eb;
+  --low: #16a34a; --medium: #d97706; --high: #dc2626;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); }
+.card { max-width: 720px; margin: 32px auto; background: var(--card); padding: 28px; border-radius: 14px; box-shadow: 0 4px 24px rgba(0,0,0,.08); }
+h1 { margin: 0; color: var(--accent); }
+.sub { margin: 4px 0 20px; color: var(--muted); }
+.stats { display: flex; gap: 12px; margin-bottom: 20px; }
+.stat { flex: 1; background: var(--bg); border-radius: 10px; padding: 12px; text-align: center; }
+.stat b { display: block; font-size: 1.6rem; }
+.stat span { color: var(--muted); font-size: .85rem; }
+.add { display: flex; gap: 8px; flex-wrap: wrap; }
+.add input[type=text], #title { flex: 1 1 200px; }
+input, select, button { font: inherit; padding: 9px 12px; border: 1px solid var(--border); border-radius: 8px; }
+button { background: var(--accent); color: #fff; border: 0; cursor: pointer; }
+button:hover { opacity: .9; }
+.error { color: var(--high); min-height: 1.2em; margin: 6px 0; font-size: .9rem; }
+.toolbar { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin: 8px 0 12px; }
+.tabs button { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+.tabs button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+ul { list-style: none; margin: 0; padding: 0; }
+li { display: flex; align-items: center; gap: 12px; padding: 12px 4px; border-bottom: 1px solid var(--border); }
+li .body { flex: 1; }
+li.done .title { text-decoration: line-through; color: var(--muted); }
+.meta { font-size: .8rem; color: var(--muted); margin-top: 2px; }
+.badge { font-size: .72rem; font-weight: 600; padding: 2px 8px; border-radius: 999px; color: #fff; text-transform: uppercase; }
+.badge.low { background: var(--low); } .badge.medium { background: var(--medium); } .badge.high { background: var(--high); }
+.overdue { color: var(--high); font-weight: 600; }
+.del { background: transparent; color: var(--high); border: 1px solid var(--border); padding: 4px 10px; }
+.empty { text-align: center; color: var(--muted); padding: 24px; }

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TaskFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <header>
+      <h1>TaskFlow</h1>
+      <p class="sub">A simple full stack task tracker</p>
+    </header>
+
+    <section class="stats" id="stats"></section>
+
+    <form id="add-form" class="add">
+      <input id="title" placeholder="What needs to be done?" maxlength="120" required>
+      <select id="priority">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <input id="due" type="date">
+      <button type="submit">Add</button>
+    </form>
+    <p id="error" class="error" role="alert"></p>
+
+    <div class="toolbar">
+      <div class="tabs" id="tabs">
+        <button data-status="" class="active">All</button>
+        <button data-status="active">Active</button>
+        <button data-status="done">Done</button>
+      </div>
+      <input id="search" type="search" placeholder="Search tasks...">
+    </div>
+
+    <ul id="list"></ul>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
